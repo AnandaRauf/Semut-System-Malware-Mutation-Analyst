@@ -1,0 +1,278 @@
+<!--
+This file is part of the pestudio solution (www.winitor.com).
+Any usage of this file outside of the context of pestudio (e.g. in third-party application, tools chain, etc...) must be explicitely authorized.
+
+Please note that this file will be modified when running pestudio.
+-->
+<xml version="1.0" encoding="utf-8" md5="">
+  <mitre url="https://attack.mitre.org">
+
+    <tactics url="tactics">
+      <!-- based on https://attack.mitre.org/tactics/ -->
+      <ta id="0001" enable="1" de="The adversary is trying to get into your network.">Initial Access</ta>
+      <ta id="0002" enable="1" de="The adversary is trying to run malicious code.">Execution</ta>
+      <ta id="0003" enable="1" de="The adversary is trying to maintain their foothold.">Persistence</ta>
+      <ta id="0004" enable="1" de="The adversary is trying to gain higher-level permissions.">Privilege Escalation</ta>
+      <ta id="0005" enable="1" de="The adversary is trying to avoid being detected.">Defense Evasion</ta>
+      <ta id="0006" enable="1" de="The adversary is trying to steal account names and passwords.">Credential Access</ta>
+      <ta id="0007" enable="1" de="The adversary is trying to figure out your environment.">Discovery</ta>
+      <ta id="0008" enable="1" de="The adversary is trying to move through your environment.">Lateral Movement</ta>
+      <ta id="0009" enable="1" de="The adversary is trying to gather data of interest to their goal.">Collection</ta>
+      <ta id="0010" enable="1" de="The adversary is trying to steal data.">Exfiltration</ta>
+      <ta id="0011" enable="1" de="The adversary is trying to communicate with compromised systems to control them.">Command and Control</ta>
+      <ta id="0040" enable="1" de="The adversary is trying to manipulate, interrupt, or destroy your systems and data.">Impact</ta>
+    </tactics>
+
+    <techniques url="techniques">
+      <!-- based on https://attack.mitre.org/techniques/ -->
+      <ti id="1001" ta="0011" flag="1" level="2" enable="1">Data Obfuscation</ti>
+      <ti id="1002" ta="0010" flag="0" level="2" enable="1">Data Compression</ti>
+      <ti id="1003" ta="0006" flag="0" level="2" enable="1">Credential Dumping</ti>
+      <ti id="1004" ta="0003" flag="0" level="2" enable="1">Winlogon Helper DLL</ti>
+      <ti id="1005" ta="0009" flag="0" level="2" enable="1">Data from Local System</ti>
+      <ti id="1006" ta="0005" flag="0" level="2" enable="1">File System Logical</ti>
+      <ti id="1007" ta="0007" flag="0" level="2" enable="1">System Service Discovery</ti>
+      <ti id="1008" ta="0011" flag="0" level="2" enable="1">Fallback Channels</ti>
+      <ti id="1009" ta="0005" flag="0" level="2" enable="1">Binary Padding</ti>
+      <ti id="1010" ta="0007" flag="0" level="2" enable="1">Window Discovery</ti>
+      <ti id="1011" ta="0010" flag="1" level="2" enable="1">Network Exfiltration</ti>
+      <ti id="1012" ta="0007" flag="0" level="2" enable="1">Query Registry</ti>
+      <ti id="1013" ta="0003" flag="0" level="2" enable="1">Port Monitors</ti>
+      <ti id="1014" ta="0005" flag="0" level="2" enable="1">Rootkit</ti>
+      <ti id="1015" ta="0003" flag="0" level="2" enable="1">Accessibility Features</ti>
+      <ti id="1016" ta="0007" flag="0" level="2" enable="1">System Network Configuration Discovery</ti>
+      <ti id="1017" ta="0008" flag="0" level="2" enable="1">Application Deployment Software</ti>
+      <ti id="1018" ta="0007" flag="0" level="2" enable="1">Remote System Discovery</ti>
+      <ti id="1019" ta="0003" flag="0" level="2" enable="1">System Firmware</ti>
+      <ti id="1020" ta="0010" flag="0" level="2" enable="1">Automated Exfiltration</ti>
+      <ti id="1021" ta="0008" flag="0" level="2" enable="1">Remote Services</ti>
+      <ti id="1022" ta="0010" flag="1" level="2" enable="1">Data Encrypted</ti>
+      <ti id="1023" ta="0003" flag="0" level="2" enable="1">Shortcut Modification</ti>
+      <ti id="1024" ta="0011" flag="0" level="2" enable="1">Custom Cryptographic</ti>
+      <ti id="1025" ta="0009" flag="0" level="2" enable="1">Data from Removable Media</ti>
+      <ti id="1026" ta="0009" flag="0" level="2" enable="1">Multiband Communication</ti>
+      <ti id="1027" ta="0005" flag="1" level="2" enable="1">Obfuscated Files or Information</ti>
+      <ti id="1028" ta="0002" flag="0" level="2" enable="1">Windows Remote Management</ti>
+      <ti id="1029" ta="0010" flag="1" level="2" enable="1">Scheduled Transfer</ti>
+      <ti id="1030" ta="0010" flag="0" level="2" enable="1">Data Transfer Size Limits</ti>
+      <ti id="1031" ta="0003" flag="1" level="2" enable="1">Modify Existing Service</ti>
+      <ti id="1032" ta="0011" flag="0" level="2" enable="1">Standard Cryptographic Protocol</ti>
+      <ti id="1033" ta="0007" flag="0" level="2" enable="1">System Owner/User Discovery</ti>
+      <ti id="1034" ta="0003" flag="0" level="2" enable="1">Path Interception</ti>
+      <ti id="1035" ta="0002" flag="1" level="2" enable="1">Service Execution</ti>
+      <ti id="1036" ta="0005" flag="1" level="2" enable="1">Masquerading</ti>
+      <ti id="1037" ta="0008" flag="0" level="2" enable="1">Logon Scripts</ti>
+      <ti id="1038" ta="0003" flag="1" level="2" enable="1">DLL Search Order Hijacking</ti>
+      <ti id="1039" ta="0009" flag="0" level="2" enable="1">Data from Network Shared Drive</ti>
+      <ti id="1040" ta="0006" flag="1" level="2" enable="1">Network Sniffing</ti>
+      <ti id="1041" ta="0010" flag="0" level="2" enable="1">Exfiltration Over C2C</ti>
+      <ti id="1042" ta="0003" flag="0" level="2" enable="1">Change Default File Association</ti>
+      <ti id="1043" ta="0011" flag="0" level="2" enable="1">Commonly Used Port</ti>
+      <ti id="1044" ta="0003" flag="0" level="2" enable="1">File System Permissions Weakness</ti>
+      <ti id="1045" ta="0005" flag="0" level="2" enable="1">Software Packing</ti>
+      <ti id="1046" ta="0007" flag="0" level="2" enable="1">Network Service Scanning</ti>
+      <ti id="1047" ta="0002" flag="0" level="2" enable="1">Windows Management Instrumentation</ti>
+      <ti id="1048" ta="0010" flag="0" level="2" enable="1">Exfiltration Over Alternative Protocol</ti>
+      <ti id="1049" ta="0007" flag="0" level="2" enable="1">System Network Connections Discovery</ti>
+      <ti id="1050" ta="0003" flag="0" level="2" enable="1">New Service</ti>
+      <ti id="1051" ta="0008" flag="0" level="2" enable="1">Shared Webroot</ti>
+      <ti id="1052" ta="0010" flag="1" level="2" enable="1">Exfiltration Over Physical Medium</ti>
+      <ti id="1053" ta="0002" flag="0" level="2" enable="1">Scheduled Task</ti>
+      <ti id="1054" ta="0005" flag="0" level="2" enable="1">Indicator Blocking</ti>
+      <ti id="1055" ta="0005" flag="1" level="2" enable="1">Process Injection</ti>
+      <ti id="1056" ta="0009" flag="1" level="2" enable="1">Input Capture</ti>
+      <ti id="1057" ta="0007" flag="1" level="2" enable="1">Process Discovery</ti>
+      <ti id="1058" ta="0003" flag="0" level="2" enable="1">Service Registry Permissions Weakness</ti>
+      <ti id="1059" ta="0002" flag="0" level="2" enable="1">Command-Line Interface</ti>
+      <ti id="1060" ta="0003" flag="1" level="2" enable="1">Registry Run Keys / Startup Folder</ti>
+      <ti id="1061" ta="0002" flag="0" level="2" enable="1">Graphical User Interface</ti>
+      <ti id="1062" ta="0003" flag="0" level="2" enable="1">Hypervisor</ti>
+      <ti id="1063" ta="0007" flag="0" level="2" enable="1">Security Software Discovery</ti>
+      <ti id="1064" ta="0005" flag="0" level="2" enable="1">Scripting</ti>
+      <ti id="1065" ta="0011" flag="0" level="2" enable="1">Uncommonly Used Port</ti>
+      <ti id="1066" ta="0005" flag="0" level="2" enable="1">Indicator Removal from Tools</ti>
+      <ti id="1067" ta="0003" flag="0" level="2" enable="1">Bootkit</ti>
+      <ti id="1068" ta="0004" flag="1" level="2" enable="1">Exploitation for Privilege Escalation</ti>
+      <ti id="1069" ta="0007" flag="1" level="2" enable="1">Permission Groups Discovery</ti>
+      <ti id="1070" ta="0005" flag="0" level="2" enable="1">Indicator Removal on Host</ti>
+      <ti id="1071" ta="0011" flag="0" level="2" enable="1">Standard Application Layer Protocol</ti>
+      <ti id="1072" ta="0002" flag="0" level="2" enable="1">Third-party Software</ti>
+      <ti id="1073" ta="0005" flag="0" level="2" enable="1">DLL Side-Loading</ti>
+      <ti id="1074" ta="0009" flag="0" level="2" enable="1">Data Staged</ti>
+      <ti id="1075" ta="0008" flag="1" level="2" enable="1">Pass the Hash</ti>
+      <ti id="1076" ta="0008" flag="0" level="2" enable="1">Remote Desktop Protocol</ti>
+      <ti id="1077" ta="0008" flag="0" level="2" enable="1">Windows Admin Shares</ti>
+      <ti id="1078" ta="0005" flag="0" level="2" enable="1">Valid Accounts</ti>
+      <ti id="1079" ta="0011" flag="0" level="2" enable="1">Multilayer Encryption</ti>
+      <ti id="1080" ta="0008" flag="0" level="2" enable="1">Taint Shared Content</ti>
+      <ti id="1081" ta="0006" flag="0" level="2" enable="1">Credentials in Files</ti>
+      <ti id="1082" ta="0007" flag="0" level="2" enable="1">System Information Discovery</ti>
+      <ti id="1083" ta="0007" flag="1" level="2" enable="1">File and Directory Discovery</ti>
+      <ti id="1084" ta="0003" flag="1" level="2" enable="1">WMI Event Subscription</ti>
+      <ti id="1085" ta="0005" flag="1" level="2" enable="1">Rundll32</ti>
+      <ti id="1086" ta="0002" flag="1" level="2" enable="1">PowerShell</ti>
+      <ti id="1087" ta="0007" flag="1" level="2" enable="1">Account Discovery</ti>
+      <ti id="1088" ta="0005" flag="1" level="2" enable="1">Bypass User Account Control</ti>
+      <ti id="1089" ta="0005" flag="1" level="2" enable="1">Disabling Security Tools</ti>
+      <ti id="1090" ta="0011" flag="0" level="2" enable="1">Connection Proxy</ti>
+      <ti id="1091" ta="0001" flag="0" level="2" enable="1">Replication Through Removable Media</ti>
+      <ti id="1092" ta="0011" flag="0" level="2" enable="1">Communication Through Removable Media</ti>
+      <ti id="1093" ta="0005" flag="0" level="2" enable="1">Process Hollowing</ti>
+      <ti id="1094" ta="0011" flag="0" level="2" enable="1">Custom C2C Protocol</ti>
+      <ti id="1095" ta="0011" flag="0" level="2" enable="1">Standard Non-Application Layer Protocol</ti>
+      <ti id="1096" ta="0005" flag="0" level="2" enable="1">NTFS File Attributes</ti>
+      <ti id="1097" ta="0008" flag="0" level="2" enable="1">Pass the Ticket</ti>
+      <ti id="1098" ta="0006" flag="0" level="2" enable="1">Account Manipulation</ti>
+      <ti id="1099" ta="0005" flag="0" level="2" enable="1">Timestomp</ti>
+      <ti id="1100" ta="0003" flag="0" level="2" enable="1">Web Shell</ti>
+      <ti id="1101" ta="0003" flag="0" level="2" enable="1">Security Support Provider</ti>
+      <ti id="1102" ta="0011" flag="0" level="2" enable="1">Web Service</ti>
+      <ti id="1103" ta="0003" flag="0" level="2" enable="1">AppInit DLLs</ti>
+      <ti id="1104" ta="0011" flag="0" level="2" enable="1">Multi-Stage Channels</ti>
+      <ti id="1105" ta="0011" flag="0" level="2" enable="1">Remote File Copy</ti>
+      <ti id="1106" ta="0002" flag="0" level="1" enable="1">Execution through API</ti>
+      <ti id="1107" ta="0005" flag="1" level="2" enable="1">File Deletion</ti>
+      <ti id="1108" ta="0005" flag="0" level="2" enable="1">Redundant Access</ti>
+      <ti id="1109" ta="0005" flag="0" level="2" enable="1">Component Firmware</ti>
+      <ti id="1110" ta="0006" flag="0" level="2" enable="1">Brute Force</ti>
+      <ti id="1111" ta="0006" flag="0" level="2" enable="1">Two-Factor Authentication Interception</ti>
+      <ti id="1112" ta="0005" flag="1" level="2" enable="1">Modify Registry</ti>
+      <ti id="1113" ta="0009" flag="1" level="2" enable="1">Screen Capture</ti>
+      <ti id="1114" ta="0009" flag="0" level="2" enable="1">Email Collection</ti>
+      <ti id="1115" ta="0009" flag="0" level="2" enable="1">Clipboard Data</ti>
+      <ti id="1116" ta="0005" flag="0" level="2" enable="1">Code Signing</ti>
+      <ti id="1117" ta="0005" flag="0" level="2" enable="1">Regsvr32</ti>
+      <ti id="1118" ta="0005" flag="0" level="2" enable="1">InstallUtil</ti>
+      <ti id="1119" ta="0009" flag="0" level="2" enable="1">Automated Collection</ti>
+      <ti id="1120" ta="0007" flag="0" level="2" enable="1">Peripheral Device Discovery</ti>
+      <ti id="1121" ta="0005" flag="0" level="2" enable="1">Regsvcs/Regasm</ti>
+      <ti id="1122" ta="0005" flag="0" level="2" enable="1">Component Object Model Hijacking</ti>
+      <ti id="1123" ta="0009" flag="0" level="2" enable="1">Audio Capture</ti>
+      <ti id="1124" ta="0007" flag="0" level="2" enable="1">System Time Discovery</ti>
+      <ti id="1125" ta="0009" flag="0" level="2" enable="1">Video Capture</ti>
+      <ti id="1126" ta="0005" flag="0" level="2" enable="1">Network Share Connection Removal</ti>
+      <ti id="1127" ta="0005" flag="0" level="2" enable="1">Trusted Developer Utilities</ti>
+      <ti id="1128" ta="0003" flag="0" level="2" enable="1">Netsh Helper DLL</ti>
+      <ti id="1129" ta="0002" flag="0" level="2" enable="1">Execution through Module Load</ti>
+      <ti id="1130" ta="0005" flag="1" level="2" enable="1">Install Root Certificate</ti>
+      <ti id="1131" ta="0003" flag="0" level="2" enable="1">Authentication Package</ti>
+      <ti id="1132" ta="0011" flag="1" level="2" enable="1">Data Encoding</ti>
+      <ti id="1133" ta="0001" flag="0" level="2" enable="1">External Remote Services</ti>
+      <ti id="1134" ta="0005" flag="1" level="2" enable="1">Access Token Manipulation</ti>
+      <ti id="1135" ta="0007" flag="0" level="2" enable="1">Network Share Discovery</ti>
+      <ti id="1136" ta="0003" flag="1" level="2" enable="1">Create Account</ti>
+      <ti id="1137" ta="0003" flag="0" level="2" enable="1">Office Application Startup</ti>
+      <ti id="1138" ta="0003" flag="0" level="2" enable="1">Application Shimming</ti>
+      <ti id="1139" ta="0006" flag="0" level="2" enable="1">Bash History</ti>
+      <ti id="1140" ta="0005" flag="0" level="2" enable="1">Deobfuscate/Decode Files or Information</ti>
+      <ti id="1141" ta="0006" flag="0" level="2" enable="1">Input Prompt</ti>
+      <ti id="1142" ta="0006" flag="0" level="2" enable="1">Keychain</ti>
+      <ti id="1143" ta="0005" flag="0" level="2" enable="1">Hidden Window</ti>
+      <ti id="1144" ta="0005" flag="0" level="2" enable="1">Gatekeeper Bypass</ti>
+      <ti id="1145" ta="0006" flag="0" level="2" enable="1">Private Keys</ti>
+      <ti id="1146" ta="0005" flag="0" level="2" enable="1">Clear Command History</ti>
+      <ti id="1147" ta="0005" flag="0" level="2" enable="1">Hidden Users</ti>
+      <ti id="1148" ta="0005" flag="0" level="2" enable="1">HISTCONTROL</ti>
+      <ti id="1149" ta="0005" flag="0" level="2" enable="1">LC_MAIN Hijacking</ti>
+      <ti id="1150" ta="0005" flag="0" level="2" enable="1">Plist Modification</ti>
+      <ti id="1151" ta="0005" flag="0" level="2" enable="1">Space after Filename</ti>
+      <ti id="1152" ta="0005" flag="0" level="2" enable="1">Launchctl</ti>
+      <ti id="1153" ta="0002" flag="0" level="2" enable="1">Source</ti>
+      <ti id="1154" ta="0002" flag="0" level="2" enable="1">Trap</ti>
+      <ti id="1155" ta="0002" flag="0" level="2" enable="1">AppleScript</ti>
+      <ti id="1156" ta="0003" flag="0" level="2" enable="1">.bash_profile and .bashrc</ti>
+      <ti id="1157" ta="0003" flag="0" level="2" enable="1">Dylib Hijacking</ti>
+      <ti id="1158" ta="0005" flag="0" level="2" enable="1">Hidden Files and Directories</ti>
+      <ti id="1159" ta="0003" flag="0" level="2" enable="1">Launch Agent</ti>
+      <ti id="1160" ta="0003" flag="0" level="2" enable="1">Launch Daemon</ti>
+      <ti id="1161" ta="0003" flag="0" level="2" enable="1">LC_LOAD_DYLIB Addition</ti>
+      <ti id="1162" ta="0003" flag="0" level="2" enable="1">Login Item</ti>
+      <ti id="1168" ta="0003" flag="0" level="2" enable="1">Local Job Scheduling</ti>
+      <ti id="1169" ta="0004" flag="0" level="2" enable="1">Sudo</ti>
+      <ti id="1170" ta="0005" flag="0" level="2" enable="1">Mshta</ti>
+      <ti id="1171" ta="0006" flag="0" level="2" enable="1">LLMNR/NBT-NS Poisoning and Relay</ti>
+      <ti id="1172" ta="0011" flag="0" level="2" enable="1">Domain Fronting</ti>
+      <ti id="1173" ta="0002" flag="0" level="2" enable="1">Dynamic Data Exchange</ti>
+      <ti id="1174" ta="0006" flag="1" level="2" enable="1">Password Filter DLL</ti>
+      <ti id="1175" ta="0008" flag="0" level="2" enable="1">Distributed Component Object Model</ti>
+      <ti id="1176" ta="0003" flag="0" level="2" enable="1">Browser Extensions</ti>
+      <ti id="1177" ta="0002" flag="1" level="2" enable="1">LSASS Driver</ti>
+      <ti id="1178" ta="0001" flag="0" level="2" enable="1">SID-History Injection</ti>
+      <ti id="1179" ta="0003" flag="0" level="2" enable="1">Hooking</ti>
+      <ti id="1180" ta="0003" flag="0" level="2" enable="1">Screensaver</ti>
+      <ti id="1181" ta="0005" flag="0" level="2" enable="1">Extra Window Memory Injection</ti>
+      <ti id="1182" ta="0003" flag="0" level="2" enable="1">AppCert DLLs</ti>
+      <ti id="1183" ta="0004" flag="0" level="2" enable="1">Image File Execution Options Injection</ti>
+      <ti id="1184" ta="0008" flag="1" level="2" enable="1">SSH Hijacking</ti>
+      <ti id="1185" ta="0009" flag="0" level="2" enable="1">Man in the Browser</ti>
+      <ti id="1186" ta="0005" flag="1" level="2" enable="1">Process Doppelgaenging</ti>
+      <ti id="1187" ta="0006" flag="0" level="2" enable="1">Forced Authentication</ti>
+      <ti id="1188" ta="0011" flag="0" level="2" enable="1">Multi-hop Proxy</ti>
+      <ti id="1189" ta="0001" flag="0" level="2" enable="1">Drive-by Compromise</ti>
+      <ti id="1190" ta="0001" flag="0" level="2" enable="1">Exploit Public-Facing Application</ti>
+      <ti id="1191" ta="0005" flag="0" level="2" enable="1">CMSTP</ti>
+      <ti id="1192" ta="0001" flag="0" level="2" enable="1">Spearphishing Link</ti>
+      <ti id="1193" ta="0001" flag="0" level="2" enable="1">Spearphishing Attachment</ti>
+      <ti id="1194" ta="0001" flag="0" level="2" enable="1">Spearphishing via Service</ti>
+      <ti id="1195" ta="0001" flag="0" level="2" enable="1">Supply Chain Compromise</ti>
+      <ti id="1196" ta="0005" flag="0" level="2" enable="1">Control Panel Items</ti>
+      <ti id="1197" ta="0005" flag="0" level="2" enable="1">BITS Jobs</ti>
+      <ti id="1198" ta="0005" flag="0" level="2" enable="1">SIP and Trust Provider Hijacking</ti>
+      <ti id="1199" ta="0001" flag="0" level="2" enable="1">Trusted Relationship</ti>
+      <ti id="1200" ta="0001" flag="0" level="2" enable="1">Hardware Additions</ti>
+      <ti id="1201" ta="0007" flag="0" level="2" enable="1">Password Policy Discovery</ti>
+      <ti id="1202" ta="0005" flag="0" level="2" enable="1">Indirect Command Execution</ti>
+      <ti id="1203" ta="0002" flag="0" level="2" enable="1">Exploitation for Client Execution</ti>
+      <ti id="1204" ta="0002" flag="0" level="2" enable="1">User Execution</ti>
+      <ti id="1205" ta="0005" flag="0" level="2" enable="1">Port Knocking</ti>
+      <ti id="1206" ta="0004" flag="0" level="2" enable="1">Sudo Caching</ti>
+      <ti id="1207" ta="0005" flag="0" level="2" enable="1">DCShadow</ti>
+      <ti id="1208" ta="0006" flag="0" level="2" enable="1">Kerberoasting</ti>
+      <ti id="1209" ta="0003" flag="0" level="2" enable="1">Time Providers</ti>
+      <ti id="1210" ta="0008" flag="0" level="2" enable="1">Exploitation of Remote Services</ti>
+      <ti id="1211" ta="0005" flag="0" level="2" enable="1">Exploitation for Defense Evasion</ti>
+      <ti id="1212" ta="0006" flag="0" level="2" enable="1">Exploitation for Credential Access</ti>
+      <ti id="1213" ta="0009" flag="0" level="2" enable="1">Data from Information Repositories</ti>
+      <ti id="1214" ta="0006" flag="0" level="2" enable="1">Credentials in Registry</ti>
+      <ti id="1215" ta="0003" flag="0" level="2" enable="1">Kernel Modules and Extensions</ti>
+      <ti id="1216" ta="0005" flag="0" level="2" enable="1">Signed Script Proxy Execution</ti>
+      <ti id="1217" ta="0007" flag="0" level="2" enable="1">Browser Bookmark Discovery</ti>
+      <ti id="1218" ta="0005" flag="0" level="2" enable="1">Signed Binary Proxy Execution</ti>
+      <ti id="1219" ta="0011" flag="0" level="2" enable="1">Remote Access Tools</ti>
+      <ti id="1221" ta="0005" flag="0" level="2" enable="1">Template Injection</ti>
+      <ti id="1222" ta="0005" flag="0" level="2" enable="1">File Permissions Modification</ti>
+      <ti id="1223" ta="0005" flag="0" level="2" enable="1">Compiled HTML File</ti>
+      <ti id="1480" ta="0005" flag="0" level="2" enable="1">Execution Guardrails</ti>
+      <ti id="1482" ta="0007" flag="0" level="2" enable="1">Domain Trust Discovery</ti>
+      <ti id="1483" ta="0011" flag="0" level="2" enable="1">Domain Generation Algorithms</ti>
+      <ti id="1484" ta="0005" flag="0" level="2" enable="1">Group Policy Modification</ti>
+      <ti id="1485" ta="0040" flag="0" level="2" enable="1">Data Destruction</ti>
+      <ti id="1486" ta="0040" flag="0" level="2" enable="1">Data Encrypted for Impact</ti>
+      <ti id="1487" ta="0040" flag="0" level="2" enable="1">Disk Structure Wipe</ti>
+      <ti id="1488" ta="0040" flag="0" level="2" enable="1">Disk Content Wipe</ti>
+      <ti id="1489" ta="0040" flag="0" level="2" enable="1">Service Stop</ti>
+      <ti id="1490" ta="0040" flag="0" level="2" enable="1">Inhibit System Recovery</ti>
+      <ti id="1491" ta="0040" flag="0" level="2" enable="1">Defacement</ti>
+      <ti id="1492" ta="0040" flag="0" level="2" enable="1">Stored Data Manipulation</ti>
+      <ti id="1493" ta="0040" flag="0" level="2" enable="1">Transmitted Data Manipulation</ti>
+      <ti id="1494" ta="0040" flag="0" level="2" enable="1">Runtime Data Manipulation</ti>
+      <ti id="1495" ta="0040" flag="0" level="2" enable="1">Firmware Corruption</ti>
+      <ti id="1496" ta="0040" flag="0" level="2" enable="1">Resource Hijacking</ti>
+      <ti id="1497" ta="0005" flag="1" level="2" enable="1">Sandbox Evasion</ti>
+      <ti id="1498" ta="0040" flag="0" level="2" enable="1">Network Denial of Service</ti>
+      <ti id="1499" ta="0040" flag="0" level="2" enable="1">Endpoint Denial of Service</ti>
+      <ti id="1500" ta="0005" flag="0" level="2" enable="1">Compile After Delivery</ti>
+      <ti id="1501" ta="0003" flag="0" level="2" enable="1">System Service</ti>
+      <ti id="1529" ta="0003" flag="0" level="2" enable="1">System Shutdown/Reboot</ti>
+      <ti id="1533" ta="0009" flag="1" level="2" enable="1">Data from Local System</ti>
+      <ti id="1543" ta="0040" flag="1" level="2" enable="1">Create or Modify System Process</ti>
+      <ti id="1547" ta="0003" flag="0" level="2" enable="1">Startup Folder</ti>
+      <ti id="1553" ta="0005" flag="1" level="1" enable="1">Subvert Trust Controls</ti>
+      <ti id="1560" ta="0009" flag="0" level="2" enable="1">Archive Collected Data</ti>
+      <ti id="1569" ta="0009" flag="1" level="2" enable="1">System Services</ti>
+      <ti id="1570" ta="0008" flag="0" level="2" enable="1">Lateral Tool Transfer</ti>
+      <ti id="1620" ta="0005" flag="1" level="1" enable="1">Reflective Code Loading</ti>
+    </techniques>
+  </mitre>
+</xml>
+
